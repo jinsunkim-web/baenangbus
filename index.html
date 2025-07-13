@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배낭버스</title>
+
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+
+    <!-- 메인배너 오토플레이 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+    <!--1. aos(마우스 휠 애니메이션) css-->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!--2. aos js파일-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <link rel="stylesheet" href="./css/style.css">
+
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="header_inner">
+            <h1 class="logo">
+                <a href="#">
+                    <svg version="1.1" id="logo_svg" xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 141.77 69.71"
+                        style="enable-background:new 0 0 141.77 69.71;" xml:space="preserve">
+                        <style type="text/css">
+                            .st0 {
+                                fill: #00AAEA;
+                            }
+                        </style>
+                        <g>
+                            <path class="st0" d="M61.9,39.9h-2.67v-1.81c0-1.12-0.91-2.03-2.03-2.03c-1.12,0-2.03,0.91-2.03,2.03v6.89H42.3
+		c-1.05,0-1.9-0.85-1.9-1.9v-4.99c0-1.12-0.91-2.03-2.03-2.03c-1.12,0-2.03,0.91-2.03,2.03v4.99c0,3.29,2.67,5.96,5.96,5.96h12.87
+		v3.44c-1.43-0.95-3.15-1.51-5-1.51c-4.99,0-9.06,4.07-9.06,9.06s4.06,9.06,9.06,9.06c4.99,0,9.06-4.06,9.06-9.06
+		c0-0.16-0.04-0.3-0.05-0.45c0.01-0.08,0.05-0.15,0.05-0.23V43.96h2.67c1.12,0,2.03-0.91,2.03-2.03S63.03,39.9,61.9,39.9z
+		 M50.17,65.02c-2.75,0-5-2.24-5-4.99c0-2.75,2.24-5,5-5c2.75,0,5,2.24,5,5C55.17,62.78,52.93,65.02,50.17,65.02z" />
+                            <path class="st0" d="M120.34,52.1c0.37,0,0.74-0.1,1.07-0.31c0.95-0.59,1.24-1.85,0.65-2.8l-7.49-11.98
+		c-0.6-0.95-1.85-1.25-2.8-0.65c-0.95,0.59-1.24,1.85-0.65,2.8l7.49,11.98C119,51.76,119.67,52.1,120.34,52.1z" />
+                            <path class="st0" d="M127.18,23.38h-9.95l-1.86,4.06h11.8c2,0,3.62,1.62,3.62,3.62v21.48c0,2.63-2.14,4.78-4.78,4.78H92.28V38.09
+		c0-1.12-0.91-2.03-2.03-2.03c-1.12,0-2.03,0.91-2.03,2.03v7.29h-4.53v-7.29c0-1.12-0.91-2.03-2.03-2.03
+		c-1.12,0-2.03,0.91-2.03,2.03v7.29H70.8v-7.29c0-1.12-0.91-2.03-2.03-2.03c-1.12,0-2.03,0.91-2.03,2.03v21.26
+		c0,1.12,0.91,2.03,2.03,2.03h12.89c1.12,0,2.03-0.91,2.03-2.03v-9.91h4.53v9.91c0,1.12,0.91,2.03,2.03,2.03c0,0,0,0,0,0
+		c0,0,0,0,0,0h35.78c4.87,0,8.84-3.97,8.84-8.84V31.06C134.87,26.83,131.42,23.38,127.18,23.38z M79.62,57.32H70.8v-7.88h8.82V57.32
+		z" />
+                            <path class="st0" d="M130.98,7.21c-5.05-3.67-7.37-3.41-9.04-2.78l0.41-0.97c0.44-1.03-0.04-2.23-1.07-2.66
+		c-1.04-0.45-2.22,0.04-2.66,1.07l-9.16,21.51H19.94c-3.53,0-6.41,2.88-6.41,6.41v10.92c-0.02,0.02-0.05,0.04-0.07,0.05L2.67,49.53
+		c-0.47,0.39-0.75,0.97-0.75,1.58v8.24c0,1.12,0.91,2.03,2.03,2.03h11.61c1.12,0,2.03-0.91,2.03-2.03V29.79
+		c0-1.3,1.05-2.35,2.35-2.35h87.78l-9.3,21.83c-0.44,1.03,0.04,2.23,1.07,2.66c0.26,0.11,0.53,0.16,0.8,0.16
+		c0.79,0,1.54-0.46,1.87-1.23l14.44-33.91c2.92-3.7,11.38-0.15,11.38-0.15c11.02,3.26,12.73-8.24,12.73-8.24
+		C137.71,11.76,130.98,7.21,130.98,7.21z M13.53,57.32H5.99v-5.24l7.54-6.13V57.32z" />
+                            <path class="st0" d="M23.17,36.06c-1.09,0.04-1.95,0.94-1.95,2.03v21.26c0,1.12,0.91,2.03,2.03,2.03c1.12,0,2.03-0.91,2.03-2.03
+		v-19.3c1.22-0.03,2.41-0.05,3.31-0.06v19.36c0,1.12,0.91,2.03,2.03,2.03c1.12,0,2.03-0.91,2.03-2.03V38.09
+		c0-0.55-0.23-1.09-0.63-1.48C31.34,35.95,31.14,35.75,23.17,36.06z" />
+                            <path class="st0"
+                                d="M5.99,39.44c0-1.12-0.91-2.03-2.03-2.03c-1.12,0-2.03,0.91-2.03,2.03v6.8l4.06-3.33V39.44z" />
+                        </g>
+                    </svg>
+
+                </a>
+            </h1>
+            <div class="gnb">
+                <ul class="btn">
+                    <li><a href="https://play.google.com/store/apps/details?id=com.baenangbus.www&pli=1"
+                            target="_blank">
+                            <p><svg width="25px" height="auto" version="1.1" id="google_svg"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;"
+                                    xml:space="preserve">
+                                    <style type="text/css">
+                                        .st0 {
+                                            fill: #191919;
+                                        }
+                                    </style>
+                                    <g id="_x31_2">
+                                        <path id="icon_21_" class="st0" d="M21.5,9.9l-3.3,3.4L4.8,0.2c4,2.3,10.3,6,10.3,6L21.5,9.9z M28.8,14.1c-0.5-0.3-3.9-2.2-5.7-3.3
+                                   l-3.6,3.7l4.1,4c1.8-1,4.6-2.7,5.2-3C29.5,15,29.5,14.4,28.8,14.1z M18.3,15.8L5.5,28.9c4.1-2.3,9.6-5.5,9.6-5.5l6.8-4L18.3,15.8z
+                                    M2.2,0.2C1.7-0.3,0.7,0.1,0.7,0.9V29c0,0.8,1,1.2,1.6,0.6L17,14.6L2.2,0.2z" />
+                                    </g>
+                                    <g id="Layer_1_1_">
+                                    </g>
+                                </svg>
+                            </p>
+                            <h4>Google Play</h4>
+                        </a></li>
+                    <li><a href="https://apps.apple.com/kr/app/%EB%B0%B0%EB%82%AD%EB%B2%84%EC%8A%A4/id1602192645"
+                            target="_blank">
+                            <p><svg width="25px" height="auto" version="1.1" id="apple_svg"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    x="0px" y="0px" viewBox="0 0 30 30" style="enable-background:new 0 0 30 30;"
+                                    xml:space="preserve">
+                                    <g id="Layer_1_1_">
+                                    </g>
+                                    <g>
+                                        <g class="apple">
+                                            <path d="M20.8,0c0.1,0,0.1,0,0.2,0c0.2,2.1-0.6,3.7-1.6,4.8c-1,1.1-2.3,2.2-4.4,2.1c-0.1-2.1,0.7-3.5,1.6-4.7
+                                       C17.5,1.2,19.2,0.2,20.8,0z" />
+                                            <path
+                                                d="M27.2,22C27.2,22,27.2,22.1,27.2,22c-0.6,1.9-1.5,3.4-2.5,4.9c-1,1.3-2.1,3.1-4.2,3.1c-1.8,0-3-1.2-4.8-1.2
+                                       c-2,0-3,1-4.8,1.2c-0.2,0-0.4,0-0.6,0c-1.3-0.2-2.4-1.2-3.1-2.2c-2.3-2.8-4-6.3-4.4-10.9c0-0.4,0-0.9,0-1.3
+                                       c0.1-3.3,1.7-5.9,3.8-7.2c1.1-0.7,2.6-1.3,4.4-1c0.7,0.1,1.5,0.4,2.1,0.6c0.6,0.2,1.4,0.7,2.1,0.6c0.5,0,1-0.3,1.5-0.5
+                                       c1.5-0.5,2.9-1.1,4.8-0.9c2.3,0.3,3.9,1.4,4.9,2.9c-1.9,1.2-3.5,3.1-3.2,6.2C23.5,19.3,25.1,21,27.2,22z" />
+                                        </g>
+                                    </g>
+                                </svg>
+                            </p>
+                            <h4>App Store</h4>
+                        </a></li>
+
+                </ul>
+            </div><!--gnv-->
+        </div><!--header_inner-->
+    </div><!--header-->
+
+    <div id="main_banner">
+        <!-- Swiper -->
+        <div class="swiper main">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide bg1"></div>
+                <div class="swiper-slide bg2"></div>
+            </div>
+
+            <!--<div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>-->
+        </div>
+        <div class="main_text">
+            <h1>쉽고 편한<br>
+                전세버스 대절예약</h1>
+            <h3><span>차량정보와 견적을 바로 확인</span>할 수 있는 <br>
+                전세버스 대절 및 정보제공 플랫폼, <br>
+                <span>배낭버스 앱을 다운로드 하세요</span>
+            </h3>
+            <div class="icon_box">
+                <a href="https://play.google.com/store/apps/details?id=com.baenangbus.www&pli=1"
+                    target="_blank"><span><img src="./images/png/google.png" alt="구글플레이 아이콘" class="google_ic">Google
+                        Play</span></a>
+                <a href="https://apps.apple.com/kr/app/%EB%B0%B0%EB%82%AD%EB%B2%84%EC%8A%A4/id1602192645"
+                    target="_blank"><span><img src="./images/png/apple.png" alt="앱스토어 아이콘" class="app_ic">App
+                        Store</span></a>
+            </div><!--icon_box-->
+        </div><!--main_text-->
+    </div><!--main_banner-->
+    <div id="down_bar">
+        <div class="bar_inner">
+            <a href="https://play.google.com/store/apps/details?id=com.baenangbus.www&pli=1" target="_blank">앱 다운로드</a>
+        </div>
+    </div><!--down_bar-->
+    <div id="sec2">
+        <div class="sec2_inner">
+            <div class="left_box">
+                <div class="title"><span>나의 일정에 맞는</span> <br>버스 정보와 견적을 바로
+                    확인!</div>
+                <p><img src="./images/png/sec2.png" alt="캘린더 아이콘"></p>
+            </div><!--left_box-->
+
+            <div class="right_text_box">
+                <ul>
+                    <li data-aos="fade-right" data-aos-duration="800">아직도 전화로 견적을 문의하세요?</li>
+                    <li data-aos="fade-left" data-aos-delay="200" data-aos-duration="1000" class="right_txt">전화문의 및 견적서
+                        요청의 번거로움 없이 <br>
+                        나만의 일정에 맞는 전세버스 견적을 <br>
+                        바로 확인할 수 있어요</li>
+                    <li data-aos="fade-right" data-aos-delay="400" data-aos-duration="1000">간편하고 빠른 견적 확인으로 <br>
+                        견적 비교에 최적화!</li>
+                    <li data-aos="fade-left" data-aos-delay="600" data-aos-duration="1000" class="right_txt">나의 일정에 맞는
+                        버스
+                        기사님과 버스 정보 확인으로 <br>
+                        쾌적한 일정 진행이 가능해요</li>
+                    <li data-aos="fade-right" data-aos-delay="800" data-aos-duration="1000">학교, 공공기관, 결혼식 등 <br>
+                        중요한 단체 일정에 필수 앱! </li>
+                    <li data-aos="fade-left" data-aos-delay="1000" data-aos-duration="1000" class="right_txt">쉽고 편하게 이용할
+                        수
+                        있는 <br>
+                        전세버스 대절 앱</li>
+                </ul>
+            </div><!--right_text_box-->
+
+        </div><!--sec2_inner-->
+    </div><!--sec2-->
+
+    <div id="sec3">
+        <div class="sec3_inner">
+            <h3>전세버스가 필요할 때</h3>
+            <h1 class="title">언제 어디서나 배낭버스</h1>
+            <ol data-aos="fade-up" data-aos-duration="1000">
+                <li>
+                    <p>버스 담당자가 직접 설정한 <br>
+                        버스 정보 및 가격 정보</p><img src="./images/png/res_1.png" alt="아이콘1">
+                </li>
+                <li>
+                    <p>간단한 예약 절차와 <br>
+                        간편한 예약 취소</p><img src="./images/png/res_2.png" alt="아이콘2">
+                </li>
+                <li>
+                    <p>안전함과 쾌적함, <br>
+                        친절한 서비스 경험</p><img src="./images/png/res_3.png" alt="아이콘3" class="icon_3">
+                </li>
+            </ol>
+        </div><!--sec3_inner-->
+    </div><!--sec3-->
+    <div id="accordion">
+        <h1>자주 묻는 질문</h1>
+        <div class="notice">
+            <ul>
+                <li>
+                    <div class="title">
+                        <div class="title_in">1. 전세버스 차량에 대한 보험가입 유무</div>
+                        <div class="plus"><img src="./images/png/scroll.png" alt="펼치기"></div>
+                    </div>
+                    <div class="text_info">
+                        전세버스 운행을 위해서는 공제조합의 보험가입이 일반적입니다. <span>배낭버스에 등록된 버스회사 및 기사님들은
+                            보험가입이 의무</span>이며 <span>가입여부가 확인되지 않을 경우 회원가입이 불가합니다.</span>
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="title_in">2. 기사님 및 운행담당자와의 소통은 어떻게 하나요?</div>
+                        <div class="plus"><img src="./images/png/scroll.png" alt="펼치기"></div>
+                    </div>
+                    <div class="text_info">
+                        [견적 전달하기]를 통해 견적이 수락되면 <span>앱 하단 [채팅]</span>에서 기사님 및 운행담당자의 연락처 및 차량정보를 전달받으며,
+                        <span>채팅창 또는 전달된 연락처</span>를 통해 소통 가능합니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="title_in">3. [견적 전달하기]에서 결제등록은 왜 하는건가요?</div>
+                        <div class="plus"><img src="./images/png/scroll.png" alt="펼치기"></div>
+                    </div>
+                    <div class="text_info">
+                        [견적 전달하기]에서 결제등록을 하지 않을 경우 전달된 견적이 수락되었을 때 추가로 결제등록을 진행하는 것이
+                        번거로울 수 있어 [견적 전달하기]에서<span>결제를 위한 카드 등록만 진행</span>하고 해당 <span>전세버스의 예약 확정 후에
+                            계약금 (견적금액 10%)이 결제</span>되며 <span>잔금은 운행종료일에 현장에서 결제</span>하시면 됩니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="title_in">4. 예약하기</div>
+                        <div class="plus"><img src="./images/png/scroll.png" alt="펼치기"></div>
+                    </div>
+                    <div class="text_info">
+                        앱 상단의 [일정 검색]에서 이용하려는 날짜와 시간을 선택한 후에 출발지와 목적지를 입력하면
+                        이용 가능한 전세버스 목록을 확인하실 수 있습니다. <span>이용하실 전세버스를 선택 후 [견적 전달하기]를 클릭하시면
+                            결제가 진행</span>되고 해당 내용을 <span>기사님 및 버스회사 잠당자가 확인 후 수락하면 전세버스 대절이 확정</span>됩니다.
+                        다만 거절되면 다른 전세버스를 확인하여 예약을 진행하시면 됩니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="title_in">5. 예약취소</div>
+                        <div class="plus"><img src="./images/png/scroll.png" alt="펼치기"></div>
+                    </div>
+                    <div class="text_info">
+                        예약취소는 [예약]에서 예약취소 버튼을 통해 직접 취소가 가능합니다. 단, <span>이용일 5일 이전의 날까지 취소하는 경우
+                            전액 환불</span>되며, <span>이용일 4일 이전의 날부터 이용일까지 기간에 취소하는 경우는 예약금액의 10%가 취소 수수료로 적용</span>됩니다.
+                    </div>
+                </li>
+                <li>
+                    <div class="title">
+                        <div class="title_in">6. 예약확인</div>
+                        <div class="plus"><img src="./images/png/scroll.png" alt="펼치기"></div>
+                    </div>
+                    <div class="text_info">
+                        앱 하단 [마이페이지]에서 예약내용을 확인할 수 있습니다.
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div><!--accordion-->
+    <div id="driver_slide">
+        <div class="title">
+            <p>배낭버스의 든든한 파트너</p>
+            <h1>기사님들을 소개합니다.</h1>
+        </div><!--title-->
+        <div class="img_box">
+            <div class="img_wrapper">
+                <ul class="img_slide">
+                    <li><img src="./images/pc/main/driver_1.jpg" alt="기사님1">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/drver_1.png" alt="기사님1 프로필"></h1>
+                                <h5>김요환 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>태평양 관광의 막둥이입니다. <br>
+                                많은 이용 바랍니다.</h4>
+                            <ol>
+                                <li>부산70바1305</li>
+                                <li>태평양관광</li>
+                                <li>44인승</li>
+                                <li>2018년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_2.jpg" alt="기사님2">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/drver_2.png" alt="기사님2 프로필"></h1>
+                                <h5>신우여행사 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>친절과 안전운행으로<br>
+                                최선을 다하겠습니다.</h4>
+                            <ol>
+                                <li>경기71바7158</li>
+                                <li>신우여행사</li>
+                                <li>44인승</li>
+                                <li>2018년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_3.jpg" alt="기사님3">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/drver_3.png" alt="기사님3 프로필"></h1>
+                                <h5>김경호/안중관광 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>처음부터 끝까지<br>
+                                최선을 다하겠습니다.</h4>
+                            <ol>
+                                <li>경기76자3925</li>
+                                <li>안중관광여행사</li>
+                                <li>44인승</li>
+                                <li>2023년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_4.jpg" alt="기사님4">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_4.png" alt="기사님4 프로필"></h1>
+                                <h5>조성철 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>친절과 안전운행으로 <br>
+                                최선을 다하겠습니다.</h4>
+                            <ol>
+                                <li>서울72바5375</li>
+                                <li>양지이벤트</li>
+                                <li>44인승</li>
+                                <li>2013년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_5.jpg" alt="기사님5
+                        ">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_5.png" alt="기사님5 프로필"></h1>
+                                <h5>임종훈 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>넷플릭스, 유튜브 시청가능하며,<br>
+                                25인승 정좌석 버스입니다.</h4>
+                            <ol>
+                                <li>경기78바2015</li>
+                                <li>테마고속관광</li>
+                                <li>21인승</li>
+                                <li>2013년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_6.jpg" alt="기사님6">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_6.png" alt="기사님6 프로필"></h1>
+                                <h5>한라고속관광 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>친절과 안전운행으로<br>
+                                최선을 다하겠습니다.</h4>
+                            <ol>
+                                <li>대전75바8496</li>
+                                <li>한라고속관광</li>
+                                <li>45인승</li>
+                                <li>2014년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+                </ul>
+
+                <ul class="img_slide">
+                    <li><img src="./images/pc/main/driver_7.jpg" alt="기사님7">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_7.png" alt="기사님7 프로필"></h1>
+                                <h5>골든클래스관광 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>항상 웃음 띤 얼굴로<br>
+                                최선을 다하겠습니다.</h4>
+                            <ol>
+                                <li>인천75아2245</li>
+                                <li>골든클래스</li>
+                                <li>44인승</li>
+                                <li>2014년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_8.jpg" alt="기사님8">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_8.png" alt="기사님8 프로필"></h1>
+                                <h5>김성호 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>안전하게 <br>모시겠습니다.</h4>
+                            <ol>
+                                <li>서울72바9818</li>
+                                <li>즐거운관광</li>
+                                <li>45인승</li>
+                                <li>2013년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_9.jpg" alt="기사님9">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_9.png" alt="기사님9 프로필"></h1>
+                                <h5>손현찬 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>최상의 컨디션인 차량으로<br>
+                                모시겠습니다.</h4>
+                            <ol>
+                                <li>경기70바7478</li>
+                                <li>즐거운관광</li>
+                                <li>20인승</li>
+                                <li>2022년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_10.jpg" alt="기사님10">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_10.png" alt="기사님10프로필"></h1>
+                                <h5>나라고속관광 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>늘 처음처럼 <br>
+                                모시겠습니다.</h4>
+                            <ol>
+                                <li>전남70자4462</li>
+                                <li>나라고속관광</li>
+                                <li>28인승</li>
+                                <li>2017년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_11.jpg" alt="기사님11">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_11.png" alt="기사님11 프로필"></h1>
+                                <h5>이승우 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>사업용35년 무사고, <br>
+                                책임감있게 모시겠습니다.</h4>
+                            <ol>
+                                <li>경기73사3074</li>
+                                <li>하나관광</li>
+                                <li>45인승</li>
+                                <li>2019년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+
+                    <li><img src="./images/pc/main/driver_12.jpg" alt="기사님12">
+                        <div class="profile_text">
+                            <div class="por_flex">
+                                <h1><img src="./images/png/driver_slide/driver_12.png" alt="기사님12 프로필"></h1>
+                                <h5>박상석 기사님</h5>
+                            </div><!--por_flex-->
+                            <h4>최신형 우등버스로 <br>
+                                안전하게 모시겠습니다.</h4>
+                            <ol>
+                                <li>대전75바6925</li>
+                                <li>금수관광</li>
+                                <li>28인승</li>
+                                <li>2023년식</li>
+                            </ol>
+                        </div><!--profile_text-->
+                    </li>
+                </ul>
+            </div><!--img_wrapper-->
+        </div><!--img_box-->
+    </div><!--driver_slide-->
+    <div id="recruit">
+        <div class="recruit_inner">
+            <h1>배낭버스의 파트너가 될 <br>
+                전국 전세버스, 관광버스 <br>
+                <span>기사님</span>을 <span>모집</span>합니다.
+            </h1>
+            <div class="btn_area">
+                <a href="https://www.baenangbus.com/banners/11" target="_blank"> <button
+                        class="w-btn w-btn-blue btn_flex" type="button">
+                        <p>파트너 신청</p>
+                        <h3><img src="./images/png/arrow.png" alt="화살표"></h3>
+                    </button></a>
+            </div><!--btn_area-->
+        </div><!--recruit_inner-->
+    </div><!--recruit-->
+    <div id="footer">
+        <div class="footer_inner">
+            <div class="left_area">
+                <div class="left_inner">
+                    <a href="#">
+                        <h1><svg version="1.1" id="footer_logo" xmlns="http://www.w3.org/2000/svg"
+                                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 141.8 69.7"
+                                style="enable-background:new 0 0 141.8 69.7;" xml:space="preserve">
+                                <style type="text/css">
+                                    .st0 {
+                                        fill: #FFFFFF;
+                                    }
+                                </style>
+                                <g>
+                                    <path class="st0" d="M61.9,39.9h-2.7v-1.8c0-1.1-0.9-2-2-2s-2,0.9-2,2V45H42.3c-1,0-1.9-0.8-1.9-1.9v-5c0-1.1-0.9-2-2-2s-2,0.9-2,2
+                           v5c0,3.3,2.7,6,6,6h12.9v3.4c-1.4-1-3.2-1.5-5-1.5c-5,0-9.1,4.1-9.1,9.1s4.1,9.1,9.1,9.1c5,0,9.1-4.1,9.1-9.1c0-0.2,0-0.3,0-0.5
+                           c0-0.1,0-0.2,0-0.2V44h2.7c1.1,0,2-0.9,2-2S63,39.9,61.9,39.9z M50.2,65c-2.8,0-5-2.2-5-5c0-2.8,2.2-5,5-5c2.8,0,5,2.2,5,5
+                           C55.2,62.8,52.9,65,50.2,65z" />
+                                    <path class="st0" d="M120.3,52.1c0.4,0,0.7-0.1,1.1-0.3c0.9-0.6,1.2-1.8,0.7-2.8l-7.5-12c-0.6-1-1.8-1.3-2.8-0.7
+                           c-0.9,0.6-1.2,1.8-0.7,2.8l7.5,12C119,51.8,119.7,52.1,120.3,52.1z" />
+                                    <path class="st0" d="M127.2,23.4h-9.9l-1.9,4.1h11.8c2,0,3.6,1.6,3.6,3.6v21.5c0,2.6-2.1,4.8-4.8,4.8H92.3V38.1c0-1.1-0.9-2-2-2
+                           c-1.1,0-2,0.9-2,2v7.3h-4.5v-7.3c0-1.1-0.9-2-2-2c-1.1,0-2,0.9-2,2v7.3h-8.8v-7.3c0-1.1-0.9-2-2-2c-1.1,0-2,0.9-2,2v21.3
+                           c0,1.1,0.9,2,2,2h12.9c1.1,0,2-0.9,2-2v-9.9h4.5v9.9c0,1.1,0.9,2,2,2l0,0l0,0H126c4.9,0,8.8-4,8.8-8.8V31.1
+                           C134.9,26.8,131.4,23.4,127.2,23.4z M79.6,57.3h-8.8v-7.9h8.8V57.3z" />
+                                    <path class="st0"
+                                        d="M131,7.2c-5.1-3.7-7.4-3.4-9-2.8l0.4-1c0.4-1,0-2.2-1.1-2.7c-1-0.4-2.2,0-2.7,1.1l-9.2,21.5H19.9
+                           c-3.5,0-6.4,2.9-6.4,6.4v10.9c0,0-0.1,0-0.1,0L2.7,49.5c-0.5,0.4-0.8,1-0.8,1.6v8.2c0,1.1,0.9,2,2,2h11.6c1.1,0,2-0.9,2-2V29.8
+                           c0-1.3,1-2.4,2.4-2.4h87.8l-9.3,21.8c-0.4,1,0,2.2,1.1,2.7c0.3,0.1,0.5,0.2,0.8,0.2c0.8,0,1.5-0.5,1.9-1.2L116.6,17
+                           c2.9-3.7,11.4-0.1,11.4-0.1c11,3.3,12.7-8.2,12.7-8.2C137.7,11.8,131,7.2,131,7.2z M13.5,57.3H6v-5.2l7.5-6.1V57.3z" />
+                                    <path class="st0" d="M23.2,36.1c-1.1,0-2,0.9-2,2v21.3c0,1.1,0.9,2,2,2s2-0.9,2-2V40c1.2,0,2.4,0,3.3-0.1v19.4c0,1.1,0.9,2,2,2
+                           s2-0.9,2-2V38.1c0-0.5-0.2-1.1-0.6-1.5C31.3,36,31.1,35.8,23.2,36.1z" />
+                                    <path class="st0" d="M6,39.4c0-1.1-0.9-2-2-2s-2,0.9-2,2v6.8L6,42.9V39.4z" />
+                                </g>
+                            </svg>
+                        </h1>
+                    </a>
+                    <p><a href="https://www.baenangbus.com/faqs" target="_blank">자주묻는 질문</a> ㅣ <a
+                            href="https://www.xn--v20b81tihi0t.com/%EC%9D%B4%EC%9A%A9%EC%95%BD%EA%B4%80"
+                            target="_blank">약관보기</a></p>
+                </div><!--left_inner-->
+                <h4>대표 정수경 ㅣ 전라남도 여수시 덕충2길 32 (전남창조경제혁신센터) 3층 302호 <br>
+                    사업자등록번호 845-14-01277 ㅣ 통신판매번호 제2020-전남여수-0116호</h4>
+                <h5>‘폼나는 누나’는 통신판매중개 사업자로써 버스기사 혹은 버스회사와 회원 간의 상품 거래를 중개하는 <br>플랫폼 서비스만을 제공할 뿐
+                    상품을 판매하는 당사자가 아니며, 상품에 대한 정보 및 이행 여부, 하자, <br>도난사고, 교통사고 등에 대한 책임과 의무는 각 판매자에게 있습니다.</h5>
+
+            </div><!--left_area-->
+            <div class="right_area">
+                <h1>1533-1035
+                </h1>
+                <p>form0313@beanangbus.com</p>
+            </div><!--right_area-->
+        </div><!--footer_inner-->
+    </div><!--footer-->
+
+
+
+
+
+
+    <!--메인배너_오토플레이 스크립트-->
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--제이쿼리 라이브러리 파일-->
+    <script src="./js/jquery-3.7.1.min.js"></script>
+    <script src="./js/main_banner.js"></script>
+    <script src="./js/sub_header.js"></script>
+    <script src="js/script.js"></script>
+
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>
